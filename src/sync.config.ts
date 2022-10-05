@@ -49,8 +49,10 @@ export async function syncFromConfig(target: string): Promise<void> {
 
     for (const file of existingFiles) {
       const fileName = basename(file.path);
-      console.log(fileName);
-      sourceFiles.delete(file.path);
+      if (sourceFiles.has(fileName)) {
+        log.info('Check:Exists', { path: file.path });
+        sourceFiles.delete(fileName);
+      }
     }
 
     for (const file of sourceFiles) {
