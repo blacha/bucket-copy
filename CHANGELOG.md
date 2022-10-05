@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.0.0 (2022-10-05)
+
+
+### Features
+
+* example using fsa for profile/role assumption based cross account copying ([1d9f5a6](https://github.com/blacha/bucket-copy/commit/1d9f5a63f1de561a017fa630522c86b3849e8e21))
+* example using fsa to sync all in use imagery ([e930e80](https://github.com/blacha/bucket-copy/commit/e930e80b2365dadc29b3b15be6c052c6e6289418))
+
 ## [0.0.3](https://github.com/linz/template-javascript-hello-world/compare/v0.0.2...v0.0.3) (2022-08-28)
 
 ### Bug Fixes
