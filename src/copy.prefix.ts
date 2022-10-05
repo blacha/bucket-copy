@@ -4,21 +4,21 @@ import { AwsCredentials } from '@chunkd/source-aws-v2';
 import S3 from 'aws-sdk/clients/s3';
 import pLimit from 'p-limit';
 import { log } from '@linzjs/tracing';
-import { SharedIniFileCredentials } from 'aws-sdk';
+import AWS from 'aws-sdk';
 
 const Q = pLimit(10);
 
 // Use the default profile and assume a role
-fsa.register(`s3://linz-baseamps`, AwsCredentials.fsFromRole('arn:...'));
+fsa.register(`s3://linz-basemaps`, AwsCredentials.fsFromRole('arn:...'));
 
 // Use a AWS Profile
-const credentials = new SharedIniFileCredentials({ profile: 'some-profile' });
-fsa.register(`s3://linz-baseamps`, new FsAwsS3(new S3({ credentials })));
+const credentials = new AWS.SharedIniFileCredentials({ profile: 'some-profile' });
+fsa.register(`s3://linz-basemaps`, new FsAwsS3(new S3({ credentials })));
 
 // Default all other S3 profiles
 fsa.register(`s3://`, new FsAwsS3(new S3()));
 
-export async function copyFiles(source: string, target: string): Promise<void> {
+export async function copyPrefix(source: string, target: string): Promise<void> {
   const promises: Promise<unknown>[] = [];
   for await (const file of fsa.details(source)) {
     if (file.size === 0 || file.isDirectory) continue;
