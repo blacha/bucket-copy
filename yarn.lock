@@ -27,10 +27,10 @@
     "@chunkd/core" "^10.0.0"
     "@chunkd/source-aws" "^10.0.0"
 
-"@chunkd/source-aws@^10.0.0":
-  version "10.0.0"
-  resolved "https://registry.yarnpkg.com/@chunkd/source-aws/-/source-aws-10.0.0.tgz#9e8f726eb69745b832e81114a57a891ea63214db"
-  integrity sha512-Kx6tFWpM7D4fWJXiEvx2iXzQ/5+jauBzS8FFTWdyyfR14dIM+eosghh8nDQd0+9hNEVK4gNcxxdG4u38IQT6DA==
+"@chunkd/source-aws@^10.0.0", "@chunkd/source-aws@^10.0.2":
+  version "10.0.2"
+  resolved "https://registry.yarnpkg.com/@chunkd/source-aws/-/source-aws-10.0.2.tgz#68d89d0adf81bd746037cc96a7cdae244cd2a710"
+  integrity sha512-N3/IjZIaflB0+HFGGlqQWXkIBx0INN0TnV3OOOlZiCiMvNFgWbmir+Se6slaD4RXr/42zjacdW5+BnNlz9P6IQ==
   dependencies:
     "@chunkd/core" "^10.0.0"
 
