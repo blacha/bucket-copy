@@ -38,7 +38,7 @@
     "@chunkd/source-aws": "^10.0.0",
     "@chunkd/source-aws-v2": "^9.2.0",
     "@linzjs/tracing": "^1.0.0",
-    "aws-sdk": "^2.1230.0",
+    "aws-sdk": "^2.1292.0",
     "p-limit": "^4.0.0"
   }
 }
