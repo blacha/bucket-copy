@@ -23,7 +23,7 @@ jobs:
     if: ${{ needs.release-please.outputs.release_created }}
     steps:
       - name: Build and test
-        uses: linz/action-typescript@v1
+        uses: linz/action-typescript@v2
         with:
           registry-url: 'https://npm.pkg.github.com'
 
